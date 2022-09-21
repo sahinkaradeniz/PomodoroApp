@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Planix Yks</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pomodoro">Pomodoro</string>
+    <string name="yardimlasma">Yardımlaşma</string>
+    <string name="reset_stopwatch">Reset Stopwatch</string>
+    <string name="toggle_stopwatch">Toggle Stopwatch</string>
+    <string name="stopwatch">Stopwatch</string>
+    <string name="_00_00">00 : 00</string>
+</resources>

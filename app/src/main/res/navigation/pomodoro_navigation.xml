@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pomodoro_navigation"
+    app:startDestination="@id/statisticFragment">
+
+    <fragment
+        android:id="@+id/statisticFragment"
+        android:name="com.skapps.YksStudyApp.view.Pomodoro.Statistics.StatisticFragment"
+        android:label="fragment_statistic"
+        tools:layout="@layout/fragment_statistic" >
+        <action
+            android:id="@+id/action_statisticFragment_to_ratingPomodoroFragment"
+            app:destination="@id/ratingPomodoroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ratingPomodoroFragment"
+        android:name="com.skapps.YksStudyApp.view.Pomodoro.RatingPomodoro.RatingPomodoroFragment"
+        android:label="fragment_rating_pomodoro"
+        tools:layout="@layout/fragment_rating_pomodoro" >
+        <action
+            android:id="@+id/action_ratingPomodoroFragment_to_statisticFragment"
+            app:destination="@id/statisticFragment" />
+        <action
+            android:id="@+id/action_ratingPomodoroFragment_to_historyPomFragment"
+            app:destination="@id/historyPomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyPomFragment"
+        android:name="com.skapps.YksStudyApp.view.Pomodoro.History.HistoryPomFragment"
+        android:label="fragment_history_pom"
+        tools:layout="@layout/fragment_history_pom" />
+</navigation>

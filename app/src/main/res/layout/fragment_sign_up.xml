@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.SignUp.SignUpFragment">
+
+    <ImageButton
+        android:id="@+id/facebookLogin2"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shadowbackground"
+        android:src="@drawable/ic_baseline_perm_phone_msg_24"
+        app:layout_constraintEnd_toStartOf="@+id/signphone"
+        app:layout_constraintStart_toEndOf="@+id/googleLogin2"
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/googleLogin2"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/shadowbackground"
+        android:src="@drawable/ic_restart"
+        app:layout_constraintBottom_toBottomOf="@+id/facebookLogin2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/facebookLogin2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/signphone"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shadowbackground"
+
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintBottom_toBottomOf="@+id/facebookLogin2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/facebookLogin2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signpasswordText"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="24dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/signemailtext"
+        app:layout_constraintStart_toStartOf="@+id/signemailtext"
+        app:layout_constraintTop_toBottomOf="@+id/signemailtext"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Şifre"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signemailtext"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupName"
+        app:startIconDrawable="@drawable/ic_baseline_alternate_email_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/raleway"
+        android:text="Kayıt Ol"
+        android:textColor="#434343"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/signupName"
+        app:layout_constraintTop_toTopOf="@+id/signupBack" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/signupName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/signemailtext"
+        app:layout_constraintStart_toStartOf="@+id/signemailtext"
+        app:layout_constraintTop_toBottomOf="@+id/textView26"
+        app:startIconDrawable="@drawable/ic_outline_person_outline_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ad Soyad" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sinupButton"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shadowbackground"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/raleway"
+        android:text="Kayıt Ol"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/signpasswordText"
+        app:layout_constraintStart_toStartOf="@+id/signpasswordText"
+        app:layout_constraintTop_toBottomOf="@+id/signpasswordText">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <ImageButton
+        android:id="@+id/signupBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shadowbackground"
+        android:src="@drawable/ic_back_40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway"
+        android:text="Veya"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/sinupButton"
+        app:layout_constraintStart_toStartOf="@+id/sinupButton"
+        app:layout_constraintTop_toBottomOf="@+id/sinupButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

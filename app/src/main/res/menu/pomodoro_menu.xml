@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/statisticFragment"
+        android:title="İstatistik"
+        android:icon="@drawable/ic_chart"/>
+    <item
+        android:id="@+id/ratingPomodoroFragment"
+        android:title="Sıralama"
+        android:icon="@drawable/ic_groups"/>
+    <item
+        android:id="@+id/historyPomFragment"
+        android:title="Geçmiş"
+        android:icon="@drawable/ic_baseline_history_24"/>
+
+</menu>

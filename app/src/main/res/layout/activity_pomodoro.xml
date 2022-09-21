@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:backgroundTint="@android:color/transparent"
+    android:fillViewport="false"
+    tools:context=".view.Pomodoro.PomodoroFragment"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:backgroundTint="@color/grey">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/raleway"
+            android:text="@string/pomodoro"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="normal|bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/toggle_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/shadowbackground"
+            android:contentDescription="@string/toggle_stopwatch"
+            android:elevation="0dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/ic_play"
+            app:iconGravity="end"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressView"
+            app:layout_constraintStart_toEndOf="@+id/reset_image_view"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressView"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressView"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reset_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginBottom="32dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/toggle_stopwatch"
+            android:visibility="visible"
+            app:backgroundTint="@android:color/transparent"
+            app:icon="@drawable/ic_restart"
+            app:iconGravity="top"
+            app:iconTint="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressView"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressView"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressView"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+        <com.github.guilhe.views.CircularProgressView
+            android:id="@+id/circularProgressView"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/addPomodoro"
+            app:layout_constraintStart_toEndOf="@+id/backPomodoro"
+            app:layout_constraintTop_toBottomOf="@+id/addPomodoro"
+            app:progress="100"
+            app:progressBarColor="@color/colorPrimary"
+            app:progressBarThickness="10dp" />
+
+        <TextView
+            android:id="@+id/stopwatch_value_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="16dp"
+            android:text="25 : 00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="44sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressView"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressView"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressView"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressView" />
+
+        <ImageButton
+            android:id="@+id/addPomodoro"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shadowbackground"
+            android:src="@drawable/ic_add_pomodoro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <ImageButton
+            android:id="@+id/backPomodoro"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/shadowbackground"
+            android:src="@drawable/ic_back_40"
+            app:layout_constraintBottom_toBottomOf="@+id/addPomodoro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addPomodoro"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomBar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="40dp"
+            app:backgroundColor="@color/colorPrimary"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toggle_button"
+            app:menu="@menu/pomodoro_menu" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navhostPomodoro"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottomBar"
+            app:navGraph="@navigation/pomodoro_navigation" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
